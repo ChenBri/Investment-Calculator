@@ -25,6 +25,8 @@ const InvestForm = (props) => {
     if (!currentSavings || !yearlyContribution || !expectedReturn || !duration)
       return;
 
+    props.currentSavingsHandler(currentSavings);
+
     let yearlyData = [];
     // The below code calculates yearly results (total savings, interest etc)
     for (let i = 0; i < duration; i++) {

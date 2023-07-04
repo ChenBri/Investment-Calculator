@@ -14,7 +14,11 @@ const InvestTable = (props) => {
       </thead>
       <tbody>
         {props.yearlyData.map((year) => (
-          <InvestItem key={year.year} data={year} />
+          <InvestItem
+            key={year.year}
+            data={year}
+            currentSavings={props.currentSavings}
+          />
         ))}
       </tbody>
     </table>
