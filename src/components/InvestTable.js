@@ -1,6 +1,6 @@
 import InvestItem from "./InvestItem";
 
-const InvestTable = () => {
+const InvestTable = (props) => {
   return (
     <table className="result">
       <thead>
@@ -13,9 +13,9 @@ const InvestTable = () => {
         </tr>
       </thead>
       <tbody>
-        <InvestItem />
-        <InvestItem />
-        <InvestItem />
+        {props.yearlyData.map((year) => (
+          <InvestItem key={year.year} data={year} />
+        ))}
       </tbody>
     </table>
   );
