@@ -8,9 +8,9 @@ const InvestItem = (props) => {
   });
   return (
     <tr>
-      <td>{formatter.format(data.year)}</td>
+      <td>{data.year}</td>
       <td>{formatter.format(data.savingsEndOfYear)}</td>
-      <td>{formatter.format(data.yearlyContribution)}</td>
+      <td>{data.yearlyContribution}</td>
       <td>
         {formatter.format(
           data.savingsEndOfYear -
