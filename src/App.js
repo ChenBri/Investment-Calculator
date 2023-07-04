@@ -16,9 +16,7 @@ function App() {
       <InvestForm yearlyData={yearlyData} resetYearlyData={resetYearlyData} />
 
       {yearlyData.length > 0 && <InvestTable yearlyData={yearlyData} />}
-      {yearlyData.length === 0 && (
-        <p className={styles.align}>No data avilable..</p>
-      )}
+      {!yearlyData.length && <p className={styles.align}>No data avilable..</p>}
     </div>
   );
 }
