@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "./assets/investment-calculator-logo.png";
 import InvestForm from "./components/InvestForm";
 import InvestTable from "./components/InvestTable";
+import styles from "./components/data.module.css";
 
 function App() {
   let [yearlyData, setYearlyData] = useState([]);
@@ -19,7 +20,7 @@ function App() {
 
       {yearlyData.length > 0 && <InvestTable yearlyData={yearlyData} />}
       {yearlyData.length === 0 && (
-        <p style={{ textAlign: "center" }}>No data avilable..</p>
+        <p className={styles.align}>No data avilable..</p>
       )}
     </div>
   );
