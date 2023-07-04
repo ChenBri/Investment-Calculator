@@ -79,7 +79,11 @@ const InvestForm = (props) => {
         </p>
       </div>
       <p className="actions">
-        <button type="reset" className="buttonAlt">
+        <button
+          type="reset"
+          className="buttonAlt"
+          onClick={() => props.resetYearlyData([])}
+        >
           Reset
         </button>
         <button type="submit" className="button">

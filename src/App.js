@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "./assets/investment-calculator-logo.png";
+import Header from "./components/Header";
 import InvestForm from "./components/InvestForm";
 import InvestTable from "./components/InvestTable";
 import styles from "./components/data.module.css";
@@ -11,10 +11,7 @@ function App() {
   }
   return (
     <div>
-      <header className="header">
-        <img src={logo} alt="logo" />
-        <h1>Investment Calculator</h1>
-      </header>
+      <Header />
 
       <InvestForm yearlyData={yearlyData} resetYearlyData={resetYearlyData} />
 
